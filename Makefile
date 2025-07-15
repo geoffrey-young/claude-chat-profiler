@@ -23,6 +23,11 @@ clean:
 	@echo "Cleaning build artifacts..."
 	rm -rf $(BUILD_DIR) $(DIST_DIR) *.dxt
 
+.PHONY: realclean
+realclean: clean
+	@echo "Cleaning node modules..."
+	rm -rf node_modules package-lock.json
+
 # Compile TypeScript
 .PHONY: build
 build:
