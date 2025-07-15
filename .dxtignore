@@ -59,3 +59,4 @@ Thumbs.db
 
 # Keep only production dependencies
 !node_modules/@modelcontextprotocol/
+!node_modules/@modelcontextprotocol/sdk/dist/esm/server/

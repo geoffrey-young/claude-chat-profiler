@@ -4,7 +4,7 @@
   "display_name": "Chat Profiler",
   "version": "0.1.0",
   "description": "Generate behavioral profiles from chat conversations for improved AI collaboration",
-  "long_description": "This server is an interface for conversation analysis and subsequent behavioral profile generation. The generated profile will be applied to future AI chats to help AI interactions work more effectively with the human participant.",
+  "long_description": "This extension is an interface for conversation analysis and subsequent behavioral profile generation. The generated profile will be applied to future AI chats to help AI interactions work more effectively with the human participant.",
   "author": {
     "name": "Geoffrey Young",
     "email": "geoffrey.young@gmail.com"
@@ -13,12 +13,18 @@
     "type": "git",
     "url": "https://github.com/geoffrey-young/claude-chat-profiler.git"
   },
+  "homepage": "https://github.com/geoffrey-young/claude-chat-profiler/",
+  "documentation": "https://github.com/geoffrey-young/claude-chat-profiler/README.md",
+  "icon": "icon.png",
+  "screenshots": [
+    "assets/screenshot.png"
+  ],
   "server": {
     "type": "node",
     "entry_point": "dist/index.js",
     "mcp_config": {
       "command": "node",
-      "args": ["dist/index.js"]
+      "args": ["${__dirname}/dist/index.js"]
     }
   },
   "tools": [
@@ -30,7 +36,7 @@
   "keywords": ["chat", "behavioral", "profile", "generator", "collaboration"],
   "license": "MIT",
   "compatibility": {
-    "claude_desktop": ">=1.0.0",
+    "claude_desktop": ">=0.12.16",
     "platforms": ["darwin", "win32", "linux"],
     "runtimes": {
       "node": ">=22.14.0"

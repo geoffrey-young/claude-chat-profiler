@@ -63,17 +63,19 @@ Generate the profile in markdown format as an artifact, ready to use as set proj
 by a future AI assistant. 
 `;
 
-const mcpServer = new McpServer({
+const server = new McpServer({
   name: "chat-profiler",
   description: CHAT_PROFILER_MCP_DESCRIPTION,
-  version: "1.0.0",
+  version: "0.1.0",
 });
 
-mcpServer.tool(
+server.registerTool(
   "generate_chat_profile",
-  GENERATE_CHAT_PROFILE_DESCRIPTION,
+  {
+    title: "Generate Chat Profile",
+    description: GENERATE_CHAT_PROFILE_DESCRIPTION
+  },
   async () => {
-    console.log("chat profiler: generate_chat_profile tool was called");
     return {
       content: [
         {
@@ -87,13 +89,10 @@ mcpServer.tool(
 
 async function main() {
   const transport = new StdioServerTransport();
-  
-  console.log("chat profiler: MCP Server (Node.js) starting...");
-  await mcpServer.connect(transport);
-  console.log("chat profiler: MCP Server (Node.js) started. Waiting for messages on stdin/stdout.");
+  await server.connect(transport);
 }
 
 main().catch((error) => {
-  console.error("chat profiler: Server error:", error);
+  console.error("Server error:", error);
   process.exit(1);
 });
