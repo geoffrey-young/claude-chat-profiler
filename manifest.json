@@ -1,12 +1,17 @@
 {
   "dxt_version": "0.1",
-  "name": "chat-profiler",
+  "name": "claude-chat-profiler",
   "display_name": "Chat Profiler",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Generate behavioral profiles from chat conversations for improved AI collaboration",
   "long_description": "This server is an interface for conversation analysis and subsequent behavioral profile generation. The generated profile will be applied to future AI chats to help AI interactions work more effectively with the human participant.",
   "author": {
-    "name": "Geoffrey Young"
+    "name": "Geoffrey Young",
+    "email": "geoffrey.young@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geoffrey-young/claude-chat-profiler.git"
   },
   "server": {
     "type": "node",
@@ -25,6 +30,10 @@
   "keywords": ["chat", "behavioral", "profile", "generator", "collaboration"],
   "license": "MIT",
   "compatibility": {
-    "node": ">=18.0.0"
+    "claude_desktop": ">=1.0.0",
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "node": ">=22.14.0"
+    }
   }
 }

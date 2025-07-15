@@ -43,8 +43,8 @@ test:
 	@echo "✓ Test completed"
 
 # Create DXT package
-.PHONY: pack
-pack: build
+.PHONY: dist
+dist: build
 	@echo "Creating DXT package..."
 	npm run pack
 
@@ -104,5 +104,5 @@ node_modules:
 # Add dependencies for targets that need node_modules
 build: node_modules
 lint: node_modules
-test: node_modules
+test: node_modules build
 typecheck: node_modules

@@ -10,6 +10,7 @@ jest.config.js
 *.test.ts
 *.spec.ts
 Makefile
+package-lock.json
 
 # Source files (we only need dist)
 server/
