@@ -1,0 +1,60 @@
+# Development files
+*.ts
+!*.d.ts
+tsconfig.json
+.eslintrc.json
+.eslintignore
+jest.config.js
+*.test.js
+*.spec.js
+*.test.ts
+*.spec.ts
+Makefile
+
+# Source files (we only need dist)
+server/
+
+# Dev dependencies
+node_modules/@types/
+node_modules/typescript/
+node_modules/ts-node/
+node_modules/eslint*/
+node_modules/jest*/
+node_modules/@jest/
+node_modules/@typescript-eslint/
+
+# Build artifacts
+*.map
+eslint-report.json
+
+# Git and editor files
+.git/
+.gitignore
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Other unnecessary files
+README.md
+CHANGELOG.md
+LICENSE
+*.log
+.npmignore
+.travis.yml
+.github/
+docs/
+examples/
+test/
+tests/
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Keep only production dependencies
+!node_modules/@modelcontextprotocol/

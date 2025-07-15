@@ -1,0 +1,33 @@
+{
+  "name": "node-chat-profiler-dxt",
+  "version": "1.0.0",
+  "description": "Claude Desktop Extension for profiling chat conversations",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node server/index.ts",
+    "test": "node -e \"console.log('Testing server import...'); require('./dist/index.js'); console.log('✓ Server imports successfully');\"",
+    "lint": "eslint server/**/*.ts",
+    "pack": "dxt pack ."
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0"
+  },
+  "keywords": ["mcp", "chat", "profiler", "analytics", "dxt"],
+  "author": "Claude Developer",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

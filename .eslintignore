@@ -1,0 +1,7 @@
+node_modules/
+build/
+dist/
+*.dxt
+coverage/
+*.js
+!jest.config.js
