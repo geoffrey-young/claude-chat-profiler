@@ -16,10 +16,6 @@
   "homepage": "https://github.com/geoffrey-young/claude-chat-profiler/",
   "documentation": "https://github.com/geoffrey-young/claude-chat-profiler/README.md",
   "icon": "icon.png",
-  "screenshots": [
-    "assets/screenshot-generate.png",
-    "assets/screenshot-apply.png"
-  ],
   "server": {
     "type": "node",
     "entry_point": "dist/index.js",
