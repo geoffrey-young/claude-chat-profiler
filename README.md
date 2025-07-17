@@ -25,16 +25,17 @@ If you play around with it, let me know what you find :)
 
 ## Why?
 
-This all started with some exploration I was doing, trying to get Claude to summarize and export simple facts it learned about me, like my technology background and the fact that I prefer output in ASCII only.  Since Claude (currently) sandboxes all conversations, I wanted to create something generic I could put into a Project as "Set project instructions":
+This all started with some exploration I was doing, trying to get Claude to summarize and export simple facts it learned about me, like my technology background and the fact that I prefer output in ASCII only.  Since Claude (currently) sandboxes all conversations, I wanted to create something generic I could put into a Project as "Set project instructions" so at least I didn't need to go about priming each new chat after hitting the "Your message will exceed the length limit for this chat..." error.
 
 This simple desire took on a life of its own - something I'll write about later, perhaps - but eventually together we ended up with a few things:
-1. A behavioral profile I could use across projects, generated from Claude's analysis of over 800 exchanges between us across 20 or so separate chats and a bunch of subsequent conversations.
-2. A prompt I could use to extract a behavioral profile from a conversation that captured the information we both thought would be the most useful to prime future chats or use as set project instructions.
-3. A prompt to ingest generated profiles, so others could inject their own profiles into conversations.
 
-After a few months of back and forth, exploration, testing, and iteration - all extremely fascinating - we had something that seemed to work across multiple AI assitants (Claude, ChatGPT, Gemini) under all different chat situations.  It was time to share.
+1. A **behavioral profile** I could use across projects, generated from Claude's analysis of over 800 exchanges between us across 20 or so separate chats and a bunch of subsequent conversations.
+2. A **prompt to extract a behavioral profile** from a conversation that captured the information we both thought would be the most useful to prime future chats or use as set project instructions.
+3. A **prompt to ingest a generated profile*, so others could inject their own profiles into conversations.
 
-I was also learning about and experimenting with MCP servers - another journey I may write up someday - and when Anthropic released the [DXT specification](https://github.com/anthropics/dxt) I went about wrapping up the work I'd done into something anyone could use.
+After a few months of back and forth, exploration, testing, and iteration - all extremely fascinating - we had something that seemed to work across multiple AI assitants (Claude, ChatGPT, Gemini) under a bunch of different chat topics.  It was time to share.
+
+At the same time, I was learning about and experimenting with MCP servers - another journey I may write up someday - so when Anthropic released the [DXT specification](https://github.com/anthropics/dxt) I went about wrapping up the work I'd done into something anyone could use.
 
 So, here we are.
 
