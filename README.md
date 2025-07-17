@@ -41,7 +41,7 @@ So, here we are.
 ## Installation
 
 1. Grab [`claude-chat-profiler.dxt`](https://github.com/geoffrey-young/claude-chat-profiler/blob/main/claude-chat-profiler.dxt)
-2. Install in Claude Desktop via the extension manager
+2. Install in Claude Desktop via the extension manager (Settings -> Extensions -> Advanced -> Install Extension...)
 3. The extension will be available as MCP tools in your Claude conversations
 
 ## Usage
