@@ -48,10 +48,14 @@ test:
 	@echo "✓ Test completed"
 
 # Create DXT package
-.PHONY: dist
-dist: build
+.PHONY: pack
+pack: build
 	@echo "Creating DXT package..."
 	npm run pack
+
+# Alias for pack
+.PHONY: dist
+dist: pack
 
 # Development mode
 .PHONY: dev
@@ -91,12 +95,15 @@ help:
 	@echo "  make         - Run full build pipeline (clean, install, build, lint, test, pack)"
 	@echo "  make install - Install npm dependencies"
 	@echo "  make clean   - Remove build artifacts"
+	@echo "  make realclean - Remove build artifacts and node_modules"
 	@echo "  make build   - Compile TypeScript files"
 	@echo "  make lint    - Run ESLint"
 	@echo "  make test    - Run tests"
 	@echo "  make pack    - Create DXT package"
+	@echo "  make dist    - Create DXT package (alias for pack)"
 	@echo "  make dev     - Start development server"
 	@echo "  make watch   - Start TypeScript compiler in watch mode"
+	@echo "  make typecheck - Check TypeScript types without building"
 	@echo "  make check   - Run lint and typecheck"
 	@echo "  make quick   - Quick build without tests"
 	@echo "  make release - Full release build with all checks"
