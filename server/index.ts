@@ -4,9 +4,10 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
 const CHAT_PROFILER_MCP_DESCRIPTION = `
-This server is an interface for conversation analysis and subsequent behavioral
-profile generation. The generated profile will be applied to future AI chats
-to help AI interactions work more effectively with the human participant.
+This MCP server extension is an interface for conversation analysis and
+subsequent behavioral profile generation. The generated profile will be
+applied to future AI chats to help AI assistants work more effectively
+with the human participant.
 `;
 
 
