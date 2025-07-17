@@ -21,7 +21,11 @@ This MCP server extension is an interface for AI conversation analysis and subse
 
 Basically, it tries to get Claude to export what it's learned about you from the current conversation so that you can then load it in to a different conversation.
 
-If you play around with it, let me know what you find :)
+Check out a sample [chat about home theater setup](assets/examples/home-theater-conversation.json) and the [generated profile](assets/examples/home-theater-generated-profile.md).
+
+It's all 100% Claude... and zero code.  (Ok, it's a little code but only so the MCP SDK has something to hook on to :)
+
+If you play around with it, let me know what you find!
 
 ## Why?
 
