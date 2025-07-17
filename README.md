@@ -27,17 +27,21 @@ If you play around with it, let me know what you find :)
 
 This all started with some exploration I was doing, trying to get Claude to summarize and export simple facts it learned about me, like my technology background and the fact that I prefer output in ASCII only.  Since Claude (currently) sandboxes all conversations, I wanted to create something generic I could put into a Project as "Set project instructions" so at least I didn't need to go about priming each new chat after hitting the "Your message will exceed the length limit for this chat..." error.
 
-This simple desire took on a life of its own - something I'll write about later, perhaps - but eventually together we ended up with a few things:
+This simple desire took on a life of its own - something I'll write about later, perhaps - and included many, many experiments and iterations that pushed all sorts of boundaries.  Eventually, together we ended up with a few things:
 
-1. A **behavioral profile** I could use across projects, generated from Claude's analysis of over 800 exchanges between us across 20 or so separate chats and a bunch of subsequent conversations.
+1. A **behavioral profile** I could use across projects, generated from Claude's analysis of over 800 exchanges between us across 20 or so separate chats, followed by tons of subsequent conversations and iterations.
 2. A **prompt to extract a behavioral profile** from a conversation that captured the information we both thought would be the most useful to prime future chats or use as set project instructions.
-3. A **prompt to ingest a generated profile*, so others could inject their own profiles into conversations.
+3. A **prompt to ingest a generated profile**, to inject a profile into conversations, which was especially useful for other environments like ChatGPT and Gemini.
 
-After a few months of back and forth, exploration, testing, and iteration - all extremely fascinating - we had something that seemed to work across multiple AI assitants (Claude, ChatGPT, Gemini) under a bunch of different chat topics.  It was time to share.
+After a few months of back and forth, exploration, testing, and iteration - all extremely fascinating - we had something that seemed to work across multiple AI assitants (Claude, ChatGPT, Gemini) under a bunch of different chat topics (technology, writing, home theater speaker placement).  It was time to share.
 
 At the same time, I was learning about and experimenting with MCP servers - another journey I may write up someday - so when Anthropic released the [DXT specification](https://github.com/anthropics/dxt) I went about wrapping up the work I'd done into something anyone could use.
 
-So, here we are.
+So, here we are - a Claude Desktop extension for easy behavioral profile generation and ingestion.
+
+There's nothing here you can't do without the extension, especially since I [included the prompts](assets/prompts/).  What the extension does give you is a simple way to generate and import profiles, as well as illustrating how to write a (mostly) code-free MCP server.
+
+Enjoy!
 
 ## Installation
 
@@ -62,7 +66,7 @@ To generate a profile, just tell Claude to generate a profile for you:
 Generate a profile from this conversation
 ```
 
-![Generate Profile Screenshot](assets/screenshot-generate-50p.png)
+![Generate Profile Screenshot](assets/screenshots/screenshot-generate-50p.png)
   
 Alternatively, you can call the `generate_chat_profile` function directly:
 
@@ -78,11 +82,11 @@ Once you have a profile, you can ask Claude to apply it to the current conversat
 Apply the attached profile to this conversation
 ```
 
-![Apply Profile Screenshot](assets/screenshot-apply-50p.png)
+![Apply Profile Screenshot](assets/screenshots/screenshot-apply-50p.png)
 
 If you forget the attachment, Claude should let you know it can't proceed:
 
-![No Attachment Apply Profile Screenshot](assets/screenshot-apply-with-no-attachment-50p.png)
+![No Attachment Apply Profile Screenshot](assets/screenshots/screenshot-apply-with-no-attachment-50p.png)
 
 Alternatively, you can call the `apply_generated_chat_profile` function directly:
 
@@ -94,7 +98,7 @@ call apply_generated_chat_profile with this attachment
 
 The generated profile can also be used as "Set project instructions" within a project if you like:
 
-![Set project instructions](assets/screenshot-set-project-instructions-50p.png)
+![Set project instructions](assets/screenshots/screenshot-set-project-instructions-50p.png)
 
 
 ## Tuning Profiles
@@ -121,15 +125,15 @@ After a **lot** of iterations, a three part structure seems to provide consisten
 - **Human Behavioral Patterns** Documents observable patterns in how you communicate and work - your question style, problem-solving approach, values and preferences, and relevant background. Uses concrete examples from conversations to illustrate these patterns, focusing on behaviors that affect collaboration effectiveness rather than personality traits.
 - **AI Response Calibration** Translates your observed patterns into specific guidelines for AI behavior - how to match communication style, engage with your  problem-solving approach, and what types of responses enhance versus hinder your thinking. Provides actionable directives for creating an effective technical partnership aligned with your collaboration goals.
 
-I've provided the lastest profile generation prompt I'm using - [`profile-generation-prompt.md`](assets/profile-generation-prompt.md) - in case you want to try it for yourself.
+I've provided the lastest profile generation prompt I'm using - [`profile-generation-prompt.md`](assets/prompts/profile-generation-prompt.md) - in case you want to try it for yourself.
 
-I've also provided a simple prompt for profile consumption - [`profile-consumption-prompt.txt`](assets/profile-consumption-prompt.txt) - for use as well.
+I've also provided a simple prompt for profile consumption - [`profile-consumption-prompt.txt`](assets/prompts/profile-consumption-prompt.txt) - for use as well.
 
 These two prompts are basically what is in [`server/index.ts`](server/index.ts), though the server code has a bit more guidance since the interface is more disconnected from the chat itself.  The main difference between using this extension and the raw prompts that I've found is that the models don't tend to get as confused about your preferences after repeated requests for profiles - at some point, it starts generating profiles based on you asking for profiles, devolving into something of a reursive spiral.
 
 Anyway, I'm sure there's more refinement and exploration to be done.
 
-For the *really* curious, [here](assets/geoffs-set_project_instructions.md) is the latest iteration of the profile I'm using as set project instructions for all of my AI explorations.
+For the *really* curious, [here](assets/profiless/geoffs-set_project_instructions.md) is the latest iteration of the profile I'm using as set project instructions for all of my AI explorations.
 
 ## Technical Details
 
