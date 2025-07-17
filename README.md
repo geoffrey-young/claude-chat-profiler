@@ -40,7 +40,7 @@ So, here we are.
 
 ## Installation
 
-1. Grab [`claude-chat-profiler.dxt`](https://github.com/geoffrey-young/claude-chat-profiler/claude-chat-profiler.dxt)
+1. Grab [`claude-chat-profiler.dxt`](https://github.com/geoffrey-young/claude-chat-profiler/blob/main/claude-chat-profiler.dxt)
 2. Install in Claude Desktop via the extension manager
 3. The extension will be available as MCP tools in your Claude conversations
 
@@ -122,13 +122,13 @@ After a **lot** of iterations, a three part structure seems to provide consisten
 
 I've provided the lastest profile generation prompt I'm using - [`profile-generation-prompt.md`](assets/profile-generation-prompt.md) - in case you want to try it for yourself.
 
-I've also provided a simple prompt for profile consumption - [`profile-consumption-prompt.txt`](assetsprofile-consumption-prompt.txt) - for use as well.
+I've also provided a simple prompt for profile consumption - [`profile-consumption-prompt.txt`](assets/profile-consumption-prompt.txt) - for use as well.
 
 These two prompts are basically what is in [`server/index.ts`](server/index.ts), though the server code has a bit more guidance since the interface is more disconnected from the chat itself.  The main difference between using this extension and the raw prompts that I've found is that the models don't tend to get as confused about your preferences after repeated requests for profiles - at some point, it starts generating profiles based on you asking for profiles, devolving into something of a reursive spiral.
 
 Anyway, I'm sure there's more refinement and exploration to be done.
 
-For the *really* curious, [here](assets/geoffs-set_project_instructions.md) is the latest version of the profile I'm using as set project instructions for all of my AI explorations.
+For the *really* curious, [here](assets/geoffs-set_project_instructions.md) is the latest iteration of the profile I'm using as set project instructions for all of my AI explorations.
 
 ## Technical Details
 
