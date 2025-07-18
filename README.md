@@ -52,22 +52,22 @@ What started as a simple desire to avoid re-explaining my background evolved int
 - A prompt that frames the profile in such a way as to apply it to a conversation
 - A framework that works across different AI platforms and conversation topics
 
-When Anthropic released the [DXT specification](https://github.com/anthropics/dxt), it was time to wrap his methodology into something anyone could use.
+When Anthropic released the [DXT specification](https://github.com/anthropics/dxt), it was time to wrap this methodology into something anyone could use.
 
 So here we are - a Claude Desktop extension that helps you move from AI-as-tool to AI-as-thinking-partner.
 
 ### `<TL;DR/>`
 
-This tool helps you calibrate your collaboration.  The profile generation prompt is designed to capture how Claude sees your collaboration style and cognitive patters for a more effective learning partnership.
+This tool helps you calibrate your collaboration.  The profile generation prompt is designed to capture how Claude sees your collaboration style and cognitive patterns for a more effective learning partnership.
 
-There's nothing here you can't do without the extension, especially since I [included the prompts](assets/prompts/) themselves.  What the extension gives you, however, is a simple way to generate and apply collaboration profiles, plus an example of how to build a (mostly) code-free MCP server.
+There's nothing here you can't do without the extension, especially since I've [included the prompts](assets/prompts/) themselves.  What Claude Desktop extension gives you, however, is a simple way to generate and apply collaboration profiles, plus an example of how to build a (mostly) code-free MCP server.
 
 Enjoy!
 
 ## Installation
 
 - Grab [`claude-chat-profiler.dxt`](https://github.com/geoffrey-young/claude-chat-profiler/blob/main/claude-chat-profiler.dxt)
-- Install in Claude Desktop via the extension manager (Settings -> Extensions -> Advanced -> Install Extension...)
+- Install `claude-chat-profiler.dxt` in Claude Desktop via the extension manager (Settings -> Extensions -> Advanced -> Install Extension...)
 - The extension will be available as MCP tools in your Claude conversations
 
 ## Usage
