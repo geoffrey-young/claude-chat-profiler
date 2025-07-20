@@ -32,7 +32,7 @@ If you play around with it, let me know what you find!
 
 ## Why?
 
-When talking to friends, family, my development team, they all seem to use AI like a sophisticated search engine: ask a question, get an answer, move on.  It's probably just how I'm wired, but when I started using AI I used to to really explore things, starting with the technologies, infrastructures, and tooling that make LLMs work, I naturally fell into a conversational pattern - asking questions, voicing what didn't make sense, needing real technical detail.  
+When talking to friends, family, my development team, they all seem to use AI like a sophisticated search engine: ask a question, get an answer, move on.  It's probably just how I'm wired, but when I started using AI I used to really explore things, starting with the technologies, infrastructures, and tooling that make LLMs work, I naturally fell into a conversational pattern - asking questions, voicing what didn't make sense, needing real technical detail.  
 
 The challenge (and frustration) is that Claude (currently) sandboxes all conversations - every new chat starts from zero.  There are really good reasons for that (ask Claude about it :) but as I moved from chat to chat it got really tiresome to re-establish my background each time, explain ground that was already covered - it was exhausting, and meant it took that much longer to get to the deeper, more productive part of the conversation.  Surely this process could be... automated?
 
@@ -91,11 +91,13 @@ Alternatively, you can call the `generate_chat_profile` function directly:
 
 > `call generate_chat_profile`
 
-### Applying a Profile
+### Applying a Generated Profile
 
 Once you have a profile, you can ask Claude to apply it to a new conversation:
 
 > `Apply the attached profile to this conversation`
+
+![Apply Profile Screenshot](assets/screenshots/apply.png)
 
 If you forget the attachment, Claude should let you know it can't proceed.
 
