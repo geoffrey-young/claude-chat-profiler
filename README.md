@@ -11,7 +11,6 @@ A Claude Desktop Extension for generating and applying behavioral profiles from 
 - [Usage](#usage)
   - [Generating a Profile](#generating-a-profile)
   - [Applying a Generated Profile](#applying-a-generated-profile)
-  - [Set Project Instructions](#set-project-instructions)
 - [Tuning Profiles](#tuning-profiles)
 - [Implementation Details](#implementation-details)
 - [Technical Details](#technical-details)
